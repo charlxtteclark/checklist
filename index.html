@@ -1628,7 +1628,25 @@ const ROLES_DATA = {
     ]
 };
 
-const storage = window.storage;
+// Use localStorage instead of Claude storage API
+const storage = {
+    async get(key) {
+        const value = localStorage.getItem(key);
+        return value ? { value } : null;
+    },
+    async set(key, value) {
+        localStorage.setItem(key, value);
+        return { key, value };
+    },
+    async delete(key) {
+        localStorage.removeItem(key);
+        return { key, deleted: true };
+    },
+    async list(prefix) {
+        const keys = Object.keys(localStorage).filter(k => k.startsWith(prefix));
+        return { keys };
+    }
+};
 let currentUser = null;
 let isManager = false;
 
