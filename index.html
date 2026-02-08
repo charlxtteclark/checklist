@@ -688,6 +688,85 @@
             font-size: 12px;
             color: var(--text-light);
         }
+        .system-section {
+            margin-bottom: 48px;
+        }
+
+        .system-section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .system-card {
+            background: var(--surface);
+            border: 2px solid var(--border);
+            padding: 24px;
+            margin-bottom: 16px;
+            transition: all 0.2s;
+            border-radius: 0px;
+        }
+
+        .system-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+
+        .system-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .system-header h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .system-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--primary);
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 0px;
+        }
+
+        .system-card p {
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .system-card ul, .system-card ol {
+            color: var(--text);
+        }
+
+        .system-card li {
+            margin-bottom: 8px;
+        }
+
+        .system-card code {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+
+        .system-card a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .system-card a:hover {
+            text-decoration: underline;
+        }
 
         .hidden {
             display: none !important;
@@ -765,6 +844,7 @@
         <main class="main-content">
             <div class="tabs" id="tabs">
                 <button class="tab active" onclick="switchTab('welcome', event)">Welcome</button>
+                <button class="tab" onclick="switchTab('tools-systems', event)">Tools & Systems</button>
                 <button class="tab" onclick="switchTab('architect', event)">Architect</button>
                 <button class="tab" onclick="switchTab('consultant', event)">Consultant</button>
                 <button class="tab" onclick="switchTab('consulting-director', event)">Consulting Director</button>
@@ -820,6 +900,184 @@
                 </div>
             </div>
 
+                        <!-- Tools & Systems Tab -->
+            <div id="tools-systems" class="tab-content">
+                <h2 style="font-size: 28px; margin-bottom: 24px; color: var(--text);">Tools & Systems</h2>
+                <p style="color: var(--text-light); margin-bottom: 32px;">Essential tools and systems you'll need to get set up at PS Hummingbird.</p>
+
+                <!-- Core Business Systems -->
+                <div class="system-section">
+                    <h3 class="system-section-title">Core Business Systems</h3>
+                    
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>Payroll System - Gusto</h4>
+                            <span class="system-badge">Invitation Required</span>
+                        </div>
+                        <p>You will receive an invite from the Hummingbird team to set up your Gusto account.</p>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>Benefits System - Beam</h4>
+                            <span class="system-badge">Invitation Required</span>
+                        </div>
+                        <p>Access your benefits and healthcare information through Beam.</p>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>Expense Reimbursement - Zoho</h4>
+                            <span class="system-badge">Invitation Required</span>
+                        </div>
+                        <p>Submit expenses and exam booking reimbursements through Zoho.</p>
+                        <p style="margin-top: 8px;"><strong>Pro Tip:</strong> Set up your email address in Zoho so you can send expenses directly via email and they'll automatically appear in the system.</p>
+                    </div>
+                </div>
+
+                <!-- Company Resources -->
+                <div class="system-section">
+                    <h3 class="system-section-title">Company Resources</h3>
+                    
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>Holiday Calendar</h4>
+                        </div>
+                        <p>Access the company holiday calendar to view official holidays and company closures.</p>
+                        <p style="margin-top: 8px; color: var(--text-light);">Link coming soon</p>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>PTO Policy</h4>
+                        </div>
+                        <p>Review our time-off policies and request procedures.</p>
+                        <p style="margin-top: 8px; color: var(--text-light);">Link coming soon</p>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>Employee Handbook</h4>
+                        </div>
+                        <p>Your complete guide to policies, procedures, and company culture.</p>
+                        <p style="margin-top: 8px; color: var(--text-light);">Link coming soon</p>
+                    </div>
+                </div>
+
+                <!-- Sales Tools -->
+                <div class="system-section">
+                    <h3 class="system-section-title">Sales Tools (US Sales Users Only)</h3>
+                    
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>ZoomInfo Setup</h4>
+                        </div>
+                        
+                        <div style="margin-top: 16px;">
+                            <p style="font-weight: 600; margin-bottom: 8px;">User Setup (IT will complete):</p>
+                            <ul style="margin-left: 20px; color: var(--text-light);">
+                                <li>Add user to <code style="background: var(--background); padding: 2px 6px; border-radius: 0px;">App-ZoomInfo</code> group in EntraID</li>
+                                <li>Add user inside ZoomInfo platform</li>
+                            </ul>
+                        </div>
+
+                        <div style="margin-top: 16px;">
+                            <p style="font-weight: 600; margin-bottom: 8px;">How to Access:</p>
+                            <ol style="margin-left: 20px;">
+                                <li>Go to <a href="https://myapps.microsoft.com" target="_blank" style="color: var(--primary);">myapps.microsoft.com</a></li>
+                                <li>Find the <strong>"ZoomInfo SSO"</strong> app (NOT the regular "ZoomInfo" - make sure it says SSO!)</li>
+                                <li>Click to launch - it uses SSO so you only need your Hummingbird credentials</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microsoft Outlook Setup -->
+                <div class="system-section">
+                    <h3 class="system-section-title">Microsoft Outlook Setup</h3>
+                    
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>Profile Picture Setup</h4>
+                        </div>
+                        
+                        <div style="margin-top: 16px;">
+                            <p style="font-weight: 600; margin-bottom: 8px;">In Microsoft Outlook:</p>
+                            <ol style="margin-left: 20px;">
+                                <li>Open Outlook and click on your initials or current profile picture in the top-right corner</li>
+                                <li>Select "Change" next to your current picture</li>
+                                <li>Choose "Upload a photo" and select an image file from your computer</li>
+                                <li>Adjust the image if needed, then click "Save"</li>
+                            </ol>
+                        </div>
+
+                        <div style="margin-top: 16px;">
+                            <p style="font-weight: 600; margin-bottom: 8px;">In Microsoft Teams:</p>
+                            <ol style="margin-left: 20px;">
+                                <li>Open Teams and click on your profile icon in the top-right corner</li>
+                                <li>Select "Manage account"</li>
+                                <li>Click on "Change picture"</li>
+                                <li>Choose "Upload picture" and select an image file from your computer</li>
+                                <li>Adjust the image if needed, then click "Save"</li>
+                            </ol>
+                        </div>
+
+                        <p style="margin-top: 12px; padding: 12px; background: var(--background); border-radius: 0px; color: var(--text-light); font-size: 14px;">
+                            <strong>Note:</strong> These profile pictures are synced across Microsoft 365 services. Changing your picture in one application (like Outlook) will automatically update it in others (like Teams).
+                        </p>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>Email Signature</h4>
+                        </div>
+                        <p>Find email signature examples in the <strong>Hummingbird team General channel files</strong> (Word document).</p>
+                        <p style="margin-top: 8px;">Copy and customize the template for your role.</p>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>Create Your One-Pager</h4>
+                        </div>
+                        <p>Copy the template one-pager PowerPoint from the <strong>Hummingbird General channel files</strong> and fill it out with your information.</p>
+                        <p style="margin-top: 8px; color: var(--text-light);">This is your professional bio that you can share with clients and team members.</p>
+                    </div>
+
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>Calendar Setup</h4>
+                        </div>
+                        
+                        <div style="margin-top: 16px;">
+                            <p style="font-weight: 600; margin-bottom: 8px;">Calendar Permissions:</p>
+                            <p>Our preference is to set your calendar permissions to allow everyone in the company to see the details. This transparency helps people choose wisely when scheduling meetings for you.</p>
+                            <p style="margin-top: 8px; color: var(--text-light);">You can always mark an appointment as <strong>Private</strong> if you don't want others to see the details.</p>
+                        </div>
+
+                        <div style="margin-top: 16px;">
+                            <p style="font-weight: 600; margin-bottom: 8px;">Pro Tips:</p>
+                            <ul style="margin-left: 20px; color: var(--text-light);">
+                                <li>Display other people's calendars overlaid with yours or next to yours</li>
+                                <li>Display multiple time zones to make it easier to select hours that work for national and international teams</li>
+                                <li>Connect your personal calendar into Outlook for your own visibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Tracking -->
+                <div class="system-section">
+                    <h3 class="system-section-title">Time & Project Tracking</h3>
+                    
+                    <div class="system-card">
+                        <div class="system-header">
+                            <h4>Time-keeping Systems</h4>
+                        </div>
+                        <p>Track your time for both project work and internal activities.</p>
+                        <p style="margin-top: 8px; color: var(--text-light);">System details and access will be provided by your manager.</p>
+                    </div>
+                </div>
+            </div>
             <div id="architect" class="tab-content"></div>
             <div id="consultant" class="tab-content"></div>
             <div id="consulting-director" class="tab-content"></div>
